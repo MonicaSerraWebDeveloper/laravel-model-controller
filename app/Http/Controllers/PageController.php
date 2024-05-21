@@ -12,9 +12,9 @@ class PageController extends Controller
         $movie = Movie::all();
 
         $data = [
-            'movie' => $movie
+            'movies' => $movie
         ];
-        
+
         return view('home', $data);
     }
 }
