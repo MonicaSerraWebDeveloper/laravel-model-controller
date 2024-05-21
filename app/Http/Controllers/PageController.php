@@ -8,6 +8,13 @@ use App\Models\Movie;
 class PageController extends Controller
 {
     public function index() {
-        return view('home');
+
+        $movie = Movie::all();
+
+        $data = [
+            'movie' => $movie
+        ];
+        
+        return view('home', $data);
     }
 }
